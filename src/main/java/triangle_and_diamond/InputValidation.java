@@ -1,3 +1,5 @@
+package triangle_and_diamond;
+
 public class InputValidation {
 
     public static void checkInputArgumentIsPositive(int inputArg) throws IllegalArgumentException {

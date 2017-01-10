@@ -1,4 +1,4 @@
-import java.io.PrintStream;
+package triangle_and_diamond;
 
 public class TriangleExercises {
 

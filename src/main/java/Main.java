@@ -1,4 +1,6 @@
-import java.io.PrintStream;
+import triangle_and_diamond.DiamondExercises;
+import triangle_and_diamond.Printy;
+import triangle_and_diamond.TriangleExercises;
 
 public class Main {
 

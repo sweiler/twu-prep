@@ -1,3 +1,5 @@
+package triangle_and_diamond;
+
 import org.junit.Before;
 import org.junit.Test;
 

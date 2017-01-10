@@ -1,3 +1,5 @@
+package triangle_and_diamond;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -54,6 +56,12 @@ public class DiamondExercisesTest {
     @Test(expected = IllegalArgumentException.class)
     public void shouldThrowExceptionOnPrintDiamondWithInvalidArgument() {
         diamondExercises.printDiamond(-1);
+    }
+
+    @Test
+    public void shouldPrintDiamondWithName(){
+        diamondExercises.printDiamondWithName(3, "Bill");
+        assertThat(outputChecker.getContents(), is("  *\n ***\nBill\n ***\n  *\n"));
     }
 
 

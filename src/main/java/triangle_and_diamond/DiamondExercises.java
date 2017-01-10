@@ -1,4 +1,4 @@
-import java.io.PrintStream;
+package triangle_and_diamond;
 
 public class DiamondExercises {
 
@@ -13,17 +13,26 @@ public class DiamondExercises {
     }
 
     public void printIsoscelesTriangle(int numberOfLines) {
+        printUpperDiamond(numberOfLines);
+        printy.printHorizontalLine(numberOfLines*2 -1);
+    }
+
+    private void printUpperDiamond(int numberOfLines) {
         InputValidation.checkInputArgumentIsPositive(numberOfLines);
 
         int initialSpace = numberOfLines - 1;
 
-        for (int i=0; i<numberOfLines; i++) {
+        for (int i=0; i<numberOfLines-1; i++) {
             printTriangleLine(initialSpace, i);
         }
     }
 
     public void printDiamond(int diamondSideLength) {
         printIsoscelesTriangle(diamondSideLength);
+        printLowerDiamond(diamondSideLength);
+    }
+
+    private void printLowerDiamond(int diamondSideLength) {
         int initialSpace = diamondSideLength - 1;
 
         for (int i = diamondSideLength - 2; i >= 0; i--) {
@@ -38,5 +47,13 @@ public class DiamondExercises {
         printy.printCharacterMultipleTimes(spaces, ' ');
         printy.printCharacterMultipleTimes(asterisks,printy.getAsterisk());
         printy.printNewLine();
+    }
+
+    public void printDiamondWithName(int diamondSideLength, String name) {
+
+        printUpperDiamond(diamondSideLength);
+        printy.printString(name);
+        printy.printNewLine();
+        printLowerDiamond(diamondSideLength);
     }
 }

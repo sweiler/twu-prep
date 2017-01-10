@@ -1,3 +1,5 @@
+package triangle_and_diamond;
+
 import java.io.PrintStream;
 
 public class Printy {
@@ -53,5 +55,9 @@ public class Printy {
 
     public void printNewLine() {
         printStream.println();
+    }
+
+    public void printString(String string) {
+        printStream.print(string);
     }
 }
