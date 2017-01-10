@@ -25,12 +25,12 @@ public class DiamondExercisesTest {
 
     @Test
     public void shouldPrintIsoscelesTriangleWith4Lines() {
-        diamondExercises.printIsoscelesTriangle(4);
-        assertThat(outputChecker.getContents(), is("   *\n  ***\n *****\n*******\n"));
+        diamondExercises.printIsoscelesTriangle(0);
+        assertThat(outputChecker.getContents(), is(""));
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void shouldThrowExceptionOnPrintIsoscelesTriangleWithInvalidArgument() {
+    public void shouldThrowExceptionOnPrintIsoscelesTriangleWithNegativeArgument() {
         diamondExercises.printIsoscelesTriangle(-1);
     }
 
@@ -42,14 +42,8 @@ public class DiamondExercisesTest {
 
     @Test
     public void shouldPrintADiamondWithLength2() {
-        diamondExercises.printDiamond(2);
-        assertThat(outputChecker.getContents(), is(" *\n***\n *\n"));
-    }
-
-    @Test
-    public void shouldPrintADiamondWithLength4() {
-        diamondExercises.printDiamond(4);
-        assertThat(outputChecker.getContents(), is("   *\n  ***\n *****\n*******\n *****\n  ***\n   *\n"));
+        diamondExercises.printDiamond(0);
+        assertThat(outputChecker.getContents(), is(""));
     }
 
 

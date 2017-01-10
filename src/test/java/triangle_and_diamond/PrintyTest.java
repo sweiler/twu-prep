@@ -3,6 +3,8 @@ package triangle_and_diamond;
 import org.junit.Before;
 import org.junit.Test;
 
+
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
@@ -12,7 +14,7 @@ public class PrintyTest {
     private Printy printy;
 
     @Before
-    public void crearteTriangleExercises() {
+    public void setup() {
         outputChecker = new AdvancedPrintStream();
         printy = new Printy(outputChecker.getPrintStream());
     }
@@ -30,10 +32,11 @@ public class PrintyTest {
     }
 
     @Test
-    public void shouldPrintHorizontalLineOf5Asterisks() {
-        printy.printHorizontalLine(5);
-        assertThat(outputChecker.getContents(), is("*****\n"));
+    public void shouldReturnNewLineCharForZeroAsterisks() {
+        printy.printHorizontalLine(0);
+        assertThat(outputChecker.getContents(), is("\n"));
     }
+
 
     @Test
     public void shouldPrintVerticalLineOf5Asterisks() {
@@ -43,8 +46,8 @@ public class PrintyTest {
 
     @Test
     public void shouldPrintVerticalLineOf3Asterisks() {
-        printy.printVerticalLine(3);
-        assertThat(outputChecker.getContents(), is("*\n*\n*\n"));
+        printy.printVerticalLine(0);
+        assertThat(outputChecker.getContents(), is(""));
     }
 
     @Test(expected = IllegalArgumentException.class)

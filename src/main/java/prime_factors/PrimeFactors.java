@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PrimeFactors {
-    public List<Integer> generate(int n) {
+    public List<Integer> generate(int number) {
         ArrayList<Integer> arrayList = new ArrayList<>();
-        if (n > 1) {
+        if (number > 1) {
             int counter = 2;
-            while (n != 1) {
-                if (n % counter == 0) {
-                    n = n / counter;
+            while (number != 1) {
+                if (number % counter == 0) {
+                    number = number / counter;
                     arrayList.add(counter);
                 } else {
                     counter++;

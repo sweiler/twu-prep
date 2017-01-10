@@ -32,7 +32,7 @@ public class PrimeFactorsTest {
     }
 
     @Test
-    public void shouldReturnCorrectFactorsForFourty() {
+    public void shouldReturnDuplicatePrimeFactors() {
         List<Integer> list = primeFactors.generate(40);
         assertThat(list, is(Arrays.asList(2,2,2,5)));
     }

@@ -13,13 +13,13 @@ public class DiamondExercises {
     }
 
     public void printIsoscelesTriangle(int numberOfLines) {
+        if (numberOfLines == 0) return;
         printUpperDiamond(numberOfLines);
         printy.printHorizontalLine(numberOfLines*2 -1);
     }
 
     private void printUpperDiamond(int numberOfLines) {
         InputValidation.checkInputArgumentIsPositive(numberOfLines);
-
         int initialSpace = numberOfLines - 1;
 
         for (int i=0; i<numberOfLines-1; i++) {

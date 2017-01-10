@@ -12,7 +12,7 @@ public class TriangleExercisesTest {
     private TriangleExercises triangleExercises;
 
     @Before
-    public void crearteTriangleExercises() {
+    public void setup() {
         outputChecker = new AdvancedPrintStream();
         triangleExercises = new TriangleExercises(new Printy(outputChecker.getPrintStream()));
     }
@@ -25,8 +25,8 @@ public class TriangleExercisesTest {
 
     @Test
     public void shouldPrintARightTriangleWithMaximum5Asterisks() {
-        triangleExercises.printRightTriangle(5);
-        assertThat(outputChecker.getContents(), is("*\n**\n***\n****\n*****\n"));
+        triangleExercises.printRightTriangle(0);
+        assertThat(outputChecker.getContents(), is(""));
     }
 
 
