@@ -3,6 +3,7 @@ import java.io.PrintStream;
 public class Printy {
 
     private PrintStream printStream;
+    private Character asterisk ='*';
 
     public Printy() {
         printStream = System.out;
@@ -12,8 +13,20 @@ public class Printy {
         this.printStream = printStream;
     }
 
+    public Printy(PrintStream printStream, Character asterisk){
+        this(printStream);
+        setAsterisk(asterisk);
+    }
+
+    public void setAsterisk(Character asterisk){
+        this.asterisk=asterisk;
+    }
+
+    public Character getAsterisk(){
+        return this.asterisk;
+    }
     public void printAsterisk() {
-        printStream.print("*");
+        printStream.print(getAsterisk());
     }
 
     public void printHorizontalLine(int numberOfAsterisks) {

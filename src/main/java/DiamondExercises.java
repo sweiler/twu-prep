@@ -24,7 +24,7 @@ public class DiamondExercises {
             asterisks = 2 * i + 1;
 
             printy.printCharacterMultipleTimes(spaces, ' ');
-            printy.printCharacterMultipleTimes(asterisks, '*');
+            printy.printCharacterMultipleTimes(asterisks,printy.getAsterisk());
             printy.printNewLine();
         }
     }
