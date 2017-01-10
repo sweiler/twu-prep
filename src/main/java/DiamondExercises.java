@@ -16,17 +16,27 @@ public class DiamondExercises {
         InputValidation.checkInputArgumentIsPositive(numberOfLines);
 
         int initialSpace = numberOfLines - 1;
-        int spaces;
-        int asterisks;
 
         for (int i=0; i<numberOfLines; i++) {
-            spaces = initialSpace - i;
-            asterisks = 2 * i + 1;
-
-            printy.printCharacterMultipleTimes(spaces, ' ');
-            printy.printCharacterMultipleTimes(asterisks,printy.getAsterisk());
-            printy.printNewLine();
+            printTriangleLine(initialSpace, i);
         }
     }
 
+    public void printDiamond(int diamondSideLength) {
+        printIsoscelesTriangle(diamondSideLength);
+        int initialSpace = diamondSideLength - 1;
+
+        for (int i = diamondSideLength - 2; i >= 0; i--) {
+            printTriangleLine(initialSpace, i);
+        }
+    }
+
+    private void printTriangleLine(int initialSpace, int loopVar) {
+        int spaces = initialSpace - loopVar;
+        int asterisks = 2 * loopVar + 1;
+
+        printy.printCharacterMultipleTimes(spaces, ' ');
+        printy.printCharacterMultipleTimes(asterisks,printy.getAsterisk());
+        printy.printNewLine();
+    }
 }
