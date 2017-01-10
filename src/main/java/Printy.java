@@ -17,24 +17,28 @@ public class Printy {
     }
 
     public void printHorizontalLine(int numberOfAsterisks) {
-        checkInputArgumentIsPositive(numberOfAsterisks);
+        InputValidation.checkInputArgumentIsPositive(numberOfAsterisks);
         for (int i = 0; i < numberOfAsterisks; i++) {
             printAsterisk();
         }
-        printStream.println();
+        printNewLine();
     }
 
     public void printVerticalLine(int numberOfAsterisks) {
-        checkInputArgumentIsPositive(numberOfAsterisks);
+        InputValidation.checkInputArgumentIsPositive(numberOfAsterisks);
         for (int i = 0; i < numberOfAsterisks; i++) {
             printAsterisk();
-            printStream.println();
+            printNewLine();
         }
     }
 
-    private void checkInputArgumentIsPositive(int inputArg) throws IllegalArgumentException {
-        if (inputArg <= 0) {
-            throw new IllegalArgumentException("Invalid Argument. Please provide postive Integer as argument!");
+    public void printCharacterMultipleTimes(int numberOfChars, char character) {
+        for (int j = 0; j < numberOfChars; j++) {
+            printStream.print(character);
         }
+    }
+
+    public void printNewLine() {
+        printStream.println();
     }
 }

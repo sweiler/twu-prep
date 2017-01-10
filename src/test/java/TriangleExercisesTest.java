@@ -12,7 +12,7 @@ public class TriangleExercisesTest {
     @Before
     public void crearteTriangleExercises() {
         outputChecker = new AdvancedPrintStream();
-        triangleExercises = new TriangleExercises(outputChecker.getPrintStream());
+        triangleExercises = new TriangleExercises(new Printy(outputChecker.getPrintStream()));
     }
 
     @Test
